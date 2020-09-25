@@ -290,11 +290,12 @@ return [
             'driver' => Mysql::class,
             'persistent' => false,
             'timezone' => 'UTC',
+            'host' => 'mysql',
 
             /**
              * For MariaDB/MySQL the internal default changed from utf8 to utf8mb4, aka full utf-8 support, in CakePHP 3.6
              */
-            //'encoding' => 'utf8mb4',
+            'encoding' => 'utf8mb4',
 
             /**
              * If your MySQL server is configured with `skip-character-set-client-handshake`
@@ -314,7 +315,6 @@ return [
              * manipulated before being executed.
              */
             'quoteIdentifiers' => false,
-
             /*
              * During development, if using MySQL < 5.6, uncommenting the
              * following line could boost the speed at which schema metadata is
